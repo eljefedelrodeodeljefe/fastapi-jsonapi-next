@@ -1,3 +1,4 @@
+# TODO: currently disabled in settings
 name: 🚀 Publish to PyPI
 
 on:
