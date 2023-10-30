@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Resource Manager &mdash; fastapi-jsonapi-next 2.3.2 documentation</title>
+      <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="_static/jquery.js?v=5d32c60e"></script>
+        <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="_static/documentation_options.js?v=5048a02b"></script>
+        <script src="_static/doctools.js?v=888ff710"></script>
+        <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Data layer" href="data_layer.html" />
+    <link rel="prev" title="Logical data abstraction" href="logical_data_abstraction.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="index.html" class="icon icon-home">
+            fastapi-jsonapi-next
+          </a>
+              <div class="version">
+                2.3
+              </div>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="installation.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="minimal_api_example.html">A minimal API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="api_filtering_example.html">Filtering API example</a></li>
+<li class="toctree-l1"><a class="reference internal" href="quickstart.html">Quickstart</a></li>
+<li class="toctree-l1"><a class="reference internal" href="routing.html">Routing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="atomic_operations.html">Atomic Operations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="view_dependencies.html">View Dependencies</a></li>
+<li class="toctree-l1"><a class="reference internal" href="filtering.html">Filtering</a></li>
+<li class="toctree-l1"><a class="reference internal" href="updated_includes_example.html">Create and include related objects (updated example)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="include_related_objects.html">Include related objects</a></li>
+<li class="toctree-l1"><a class="reference internal" href="include_many_to_many.html">Include nested and related, Many-to-Many</a></li>
+<li class="toctree-l1"><a class="reference internal" href="custom_sql_filtering.html">Custom SQL filtering</a></li>
+<li class="toctree-l1"><a class="reference internal" href="client_generated_id.html">Client generated id</a></li>
+<li class="toctree-l1"><a class="reference internal" href="logical_data_abstraction.html">Logical data abstraction</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Resource Manager</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#required-attributes">Required attributes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#resourcelist">ResourceList</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#resourcedetail">ResourceDetail</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="data_layer.html">Data layer</a></li>
+<li class="toctree-l1"><a class="reference internal" href="relationships.html">Define relationships</a></li>
+<li class="toctree-l1"><a class="reference internal" href="configuration.html">Configuration</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="sparse_fieldsets.html">Sparse fieldsets</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pagination.html">Pagination</a></li>
+<li class="toctree-l1"><a class="reference internal" href="sorting.html">Sorting</a></li>
+<li class="toctree-l1"><a class="reference internal" href="errors.html">Errors</a></li>
+<li class="toctree-l1"><a class="reference internal" href="permission.html">Permission</a></li>
+<li class="toctree-l1"><a class="reference internal" href="oauth.html">OAuth</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="changelog.html">Changelog</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">fastapi-jsonapi-next</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Resource Manager</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/resource_manager.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="resource-manager">
+<span id="id1"></span><h1>Resource Manager<a class="headerlink" href="#resource-manager" title="Link to this heading"></a></h1>
+<p>Resource manager is the link between your logical data abstraction, your data layer and optionally other software. It is the place where logic management of your resource is located.</p>
+<p>fastapi-jsonapi-next provides three kinds of resource managers with default methods implemented according to the JSON:API 1.0 specification:</p>
+<ul class="simple">
+<li><p><strong>ResourceList</strong>: provides get and post methods to retrieve or create a collection of objects.</p></li>
+<li><p><strong>ResourceDetail</strong>: provides get, patch and delete methods to retrieve details of an object, update or delete it</p></li>
+<li><p><strong>ResourceRelationship</strong>: provides get, post, patch and delete methods to get, create, update and delete relationships between objects. <strong>IN DEVELOPING</strong></p></li>
+</ul>
+<p>You can rewrite each default method implementation to customize it. If you rewrite all default methods of a resource manager or if you rewrite a method and disable access to others, you don’t have to set any attributes of your resource manager.</p>
+<dl class="simple">
+<dt>All url are pased via helper class <strong>QueryStringManager</strong>, which make parsing url query string according json-api. If you want override implementation class used you can do it for 1 resource via attribute.</dt><dd><dl class="field-list simple">
+<dt class="field-odd">qs_manager_class<span class="colon">:</span></dt>
+<dd class="field-odd"><p>default implementation via  <strong>QueryStringManager</strong></p>
+</dd>
+</dl>
+</dd>
+</dl>
+<p>or globally via:
+.. code-block::python</p>
+<blockquote>
+<div><p>api = Api(blueprint=api_blueprint, qs_manager_class=CustomQS)</p>
+</div></blockquote>
+<section id="required-attributes">
+<h2>Required attributes<a class="headerlink" href="#required-attributes" title="Link to this heading"></a></h2>
+<p>If you want to use one of the resource manager default method implementations you have to set two required attributes in your resource manager: schema and data_layer.</p>
+<blockquote>
+<div><dl class="field-list simple">
+<dt class="field-odd">schema<span class="colon">:</span></dt>
+<dd class="field-odd"><p>the logical data abstraction used by the resource manager. It must be a class inherited from marshmallow_jsonapi.schema.Schema.</p>
+</dd>
+<dt class="field-even">data_layer<span class="colon">:</span></dt>
+<dd class="field-even"><p>data layer information used to initialize your data layer (If you want to learn more: <a class="reference internal" href="data_layer.html#data-layer"><span class="std std-ref">Data layer</span></a>)</p>
+</dd>
+</dl>
+</div></blockquote>
+</section>
+<section id="resourcelist">
+<h2>ResourceList<a class="headerlink" href="#resourcelist" title="Link to this heading"></a></h2>
+<p>Example:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">UserList</span><span class="p">:</span>
+    <span class="nd">@classmethod</span>
+    <span class="k">async</span> <span class="k">def</span> <span class="nf">get</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span> <span class="n">query_params</span><span class="p">:</span> <span class="n">QueryStringManager</span><span class="p">,</span> <span class="n">session</span><span class="p">:</span> <span class="n">AsyncSession</span> <span class="o">=</span> <span class="n">Depends</span><span class="p">(</span><span class="n">Connector</span><span class="o">.</span><span class="n">get_session</span><span class="p">))</span> <span class="o">-&gt;</span> <span class="n">Union</span><span class="p">[</span><span class="n">Select</span><span class="p">,</span> <span class="n">JSONAPIResultListSchema</span><span class="p">]:</span>
+        <span class="n">user_query</span> <span class="o">=</span> <span class="n">select</span><span class="p">(</span><span class="n">User</span><span class="p">)</span>
+        <span class="n">dl</span> <span class="o">=</span> <span class="n">SqlalchemyEngine</span><span class="p">(</span><span class="n">query</span><span class="o">=</span><span class="n">user_query</span><span class="p">,</span> <span class="n">schema</span><span class="o">=</span><span class="n">UserSchema</span><span class="p">,</span> <span class="n">model</span><span class="o">=</span><span class="n">User</span><span class="p">,</span> <span class="n">session</span><span class="o">=</span><span class="n">session</span><span class="p">)</span>
+        <span class="n">count</span><span class="p">,</span> <span class="n">users_db</span> <span class="o">=</span> <span class="k">await</span> <span class="n">dl</span><span class="o">.</span><span class="n">get_collection</span><span class="p">(</span><span class="n">qs</span><span class="o">=</span><span class="n">query_params</span><span class="p">)</span>
+        <span class="n">total_pages</span> <span class="o">=</span> <span class="n">count</span> <span class="o">//</span> <span class="n">query_params</span><span class="o">.</span><span class="n">pagination</span><span class="o">.</span><span class="n">size</span> <span class="o">+</span> <span class="p">(</span><span class="n">count</span> <span class="o">%</span> <span class="n">query_params</span><span class="o">.</span><span class="n">pagination</span><span class="o">.</span><span class="n">size</span> <span class="ow">and</span> <span class="mi">1</span><span class="p">)</span>
+        <span class="n">users</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="n">UserSchema</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="n">UserSchema</span><span class="o">.</span><span class="n">from_orm</span><span class="p">(</span><span class="n">i_user</span><span class="p">)</span> <span class="k">for</span> <span class="n">i_user</span> <span class="ow">in</span> <span class="n">users_db</span><span class="p">]</span>
+        <span class="k">return</span> <span class="n">JSONAPIResultListSchema</span><span class="p">(</span>
+            <span class="n">meta</span><span class="o">=</span><span class="p">{</span><span class="s2">&quot;count&quot;</span><span class="p">:</span> <span class="n">count</span><span class="p">,</span> <span class="s2">&quot;totalPages&quot;</span><span class="p">:</span> <span class="n">total_pages</span><span class="p">},</span>
+            <span class="n">data</span><span class="o">=</span><span class="p">[{</span><span class="s2">&quot;id&quot;</span><span class="p">:</span> <span class="n">i_obj</span><span class="o">.</span><span class="n">id</span><span class="p">,</span> <span class="s2">&quot;attributes&quot;</span><span class="p">:</span> <span class="n">i_obj</span><span class="o">.</span><span class="n">dict</span><span class="p">(),</span> <span class="s2">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;user&quot;</span><span class="p">}</span> <span class="k">for</span> <span class="n">i_obj</span> <span class="ow">in</span> <span class="n">users</span><span class="p">],</span>
+        <span class="p">)</span>
+
+    <span class="nd">@classmethod</span>
+    <span class="k">async</span> <span class="k">def</span> <span class="nf">post</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span> <span class="n">data</span><span class="p">:</span> <span class="n">UserInSchema</span><span class="p">,</span> <span class="n">query_params</span><span class="p">:</span> <span class="n">QueryStringManager</span><span class="p">,</span> <span class="n">session</span><span class="p">:</span> <span class="n">AsyncSession</span> <span class="o">=</span> <span class="n">Depends</span><span class="p">(</span><span class="n">Connector</span><span class="o">.</span><span class="n">get_session</span><span class="p">))</span> <span class="o">-&gt;</span> <span class="n">UserSchema</span><span class="p">:</span>
+        <span class="k">try</span><span class="p">:</span>
+            <span class="n">user_obj</span> <span class="o">=</span> <span class="k">await</span> <span class="n">UserFactory</span><span class="o">.</span><span class="n">create</span><span class="p">(</span>
+                <span class="n">data</span><span class="o">=</span><span class="n">data</span><span class="o">.</span><span class="n">dict</span><span class="p">(),</span>
+                <span class="n">mode</span><span class="o">=</span><span class="n">FactoryUseMode</span><span class="o">.</span><span class="n">production</span><span class="p">,</span>
+                <span class="n">header</span><span class="o">=</span><span class="n">query_params</span><span class="o">.</span><span class="n">headers</span><span class="p">,</span>
+                <span class="n">session</span><span class="o">=</span><span class="n">session</span><span class="p">,</span>
+            <span class="p">)</span>
+        <span class="k">except</span> <span class="n">ErrorCreateUserObject</span> <span class="k">as</span> <span class="n">ex</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="n">BadRequest</span><span class="p">(</span><span class="n">ex</span><span class="o">.</span><span class="n">description</span><span class="p">,</span> <span class="n">ex</span><span class="o">.</span><span class="n">field</span><span class="p">)</span>
+
+        <span class="n">user</span> <span class="o">=</span> <span class="n">UserSchema</span><span class="o">.</span><span class="n">from_orm</span><span class="p">(</span><span class="n">user_obj</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">user</span>
+</pre></div>
+</div>
+</section>
+<section id="resourcedetail">
+<h2>ResourceDetail<a class="headerlink" href="#resourcedetail" title="Link to this heading"></a></h2>
+<p>Example:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">UserDetail</span><span class="p">:</span>
+    <span class="nd">@classmethod</span>
+    <span class="k">async</span> <span class="k">def</span> <span class="nf">get_user</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span> <span class="n">user_id</span><span class="p">,</span> <span class="n">query_params</span><span class="p">:</span> <span class="n">QueryStringManager</span><span class="p">,</span> <span class="n">session</span><span class="p">:</span> <span class="n">AsyncSession</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">User</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Get user by id from ORM.</span>
+
+<span class="sd">        :param user_id: int</span>
+<span class="sd">        :param query_params: QueryStringManager</span>
+<span class="sd">        :return: User model.</span>
+<span class="sd">        :raises HTTPException: if user not found.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">user</span><span class="p">:</span> <span class="n">User</span>
+        <span class="k">try</span><span class="p">:</span>
+            <span class="n">user</span> <span class="o">=</span> <span class="p">(</span><span class="k">await</span> <span class="n">session</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="n">select</span><span class="p">(</span><span class="n">User</span><span class="p">)</span><span class="o">.</span><span class="n">where</span><span class="p">(</span><span class="n">User</span><span class="o">.</span><span class="n">id</span> <span class="o">==</span> <span class="n">user_id</span><span class="p">)))</span><span class="o">.</span><span class="n">scalar_one</span><span class="p">()</span>
+        <span class="k">except</span> <span class="n">DoesNotExist</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="n">HTTPException</span><span class="p">(</span>
+                <span class="n">status_code</span><span class="o">=</span><span class="n">HTTPStatus</span><span class="o">.</span><span class="n">FORBIDDEN</span><span class="p">,</span>
+                <span class="n">detail</span><span class="o">=</span><span class="s2">&quot;User with id </span><span class="si">{id}</span><span class="s2"> not found&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="nb">id</span><span class="o">=</span><span class="n">user_id</span><span class="p">),</span>
+            <span class="p">)</span>
+
+        <span class="k">return</span> <span class="n">user</span>
+
+    <span class="nd">@classmethod</span>
+    <span class="k">async</span> <span class="k">def</span> <span class="nf">get</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span> <span class="n">obj_id</span><span class="p">,</span> <span class="n">query_params</span><span class="p">:</span> <span class="n">QueryStringManager</span><span class="p">,</span> <span class="n">session</span><span class="p">:</span> <span class="n">AsyncSession</span> <span class="o">=</span> <span class="n">Depends</span><span class="p">(</span><span class="n">Connector</span><span class="o">.</span><span class="n">get_session</span><span class="p">))</span> <span class="o">-&gt;</span> <span class="n">UserSchema</span><span class="p">:</span>
+        <span class="n">user</span><span class="p">:</span> <span class="n">User</span> <span class="o">=</span> <span class="k">await</span> <span class="bp">cls</span><span class="o">.</span><span class="n">get_user</span><span class="p">(</span><span class="n">user_id</span><span class="o">=</span><span class="n">obj_id</span><span class="p">,</span> <span class="n">query_params</span><span class="o">=</span><span class="n">query_params</span><span class="p">,</span> <span class="n">session</span><span class="o">=</span><span class="n">session</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">UserSchema</span><span class="o">.</span><span class="n">from_orm</span><span class="p">(</span><span class="n">user</span><span class="p">)</span>
+
+    <span class="nd">@classmethod</span>
+    <span class="k">async</span> <span class="k">def</span> <span class="nf">patch</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span> <span class="n">obj_id</span><span class="p">,</span> <span class="n">data</span><span class="p">:</span> <span class="n">UserPatchSchema</span><span class="p">,</span> <span class="n">query_params</span><span class="p">:</span> <span class="n">QueryStringManager</span><span class="p">,</span> <span class="n">session</span><span class="p">:</span> <span class="n">AsyncSession</span> <span class="o">=</span> <span class="n">Depends</span><span class="p">(</span><span class="n">Connector</span><span class="o">.</span><span class="n">get_session</span><span class="p">))</span> <span class="o">-&gt;</span> <span class="n">UserSchema</span><span class="p">:</span>
+        <span class="n">user_obj</span><span class="p">:</span> <span class="n">User</span>
+        <span class="k">try</span><span class="p">:</span>
+            <span class="n">user_obj</span> <span class="o">=</span> <span class="k">await</span> <span class="n">UpdateUser</span><span class="o">.</span><span class="n">update</span><span class="p">(</span>
+                <span class="n">obj_id</span><span class="p">,</span>
+                <span class="n">data</span><span class="o">.</span><span class="n">dict</span><span class="p">(</span><span class="n">exclude_unset</span><span class="o">=</span><span class="kc">True</span><span class="p">),</span>
+                <span class="n">query_params</span><span class="o">.</span><span class="n">headers</span><span class="p">,</span>
+                <span class="n">session</span><span class="o">=</span><span class="n">session</span><span class="p">,</span>
+            <span class="p">)</span>
+        <span class="k">except</span> <span class="n">ErrorUpdateUserObject</span> <span class="k">as</span> <span class="n">ex</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="n">BadRequest</span><span class="p">(</span><span class="n">ex</span><span class="o">.</span><span class="n">description</span><span class="p">,</span> <span class="n">ex</span><span class="o">.</span><span class="n">field</span><span class="p">)</span>
+        <span class="k">except</span> <span class="n">ObjectNotFound</span> <span class="k">as</span> <span class="n">ex</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="n">HTTPException</span><span class="p">(</span><span class="n">status_code</span><span class="o">=</span><span class="n">HTTPStatus</span><span class="o">.</span><span class="n">NOT_FOUND</span><span class="p">,</span> <span class="n">detail</span><span class="o">=</span><span class="n">ex</span><span class="o">.</span><span class="n">description</span><span class="p">)</span>
+
+        <span class="n">user</span> <span class="o">=</span> <span class="n">UserSchema</span><span class="o">.</span><span class="n">from_orm</span><span class="p">(</span><span class="n">user_obj</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">user</span>
+</pre></div>
+</div>
+<p>This minimal ResourceDetail configuration provides a GET, PATCH and DELETE interface to retrieve details of an object, update and delete it with all-powerful features like sparse fieldsets and including related objects.</p>
+<p>If your schema has relationship fields you can update an object and also update its links to (one or more) related objects at the same time. For an example see <a class="reference internal" href="quickstart.html#quickstart"><span class="std std-ref">Quickstart</span></a>.</p>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="logical_data_abstraction.html" class="btn btn-neutral float-left" title="Logical data abstraction" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="data_layer.html" class="btn btn-neutral float-right" title="Data layer" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2023, MTS AI.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
