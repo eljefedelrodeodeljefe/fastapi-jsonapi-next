@@ -5,7 +5,7 @@ Filtering
 
 .. currentmodule:: fastapi_jsonapi
 
-FastAPI-JSONAPI has a very flexible filtering system.
+fastapi-jsonapi-next has a very flexible filtering system.
 The filtering system is directly attached to the data layer used by the ResourceList manager.
 These examples show the filtering interface for SQLAlchemy's data layer
 but you can use the same interface for your custom data layer's filtering implementation as well.

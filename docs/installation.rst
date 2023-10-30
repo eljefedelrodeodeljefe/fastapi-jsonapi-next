@@ -5,16 +5,16 @@ Installation
 
 .. currentmodule:: fastapi_jsonapi
 
-Install FastAPI-JSONAPI with ``pip`` ::
+Install fastapi-jsonapi-next with ``pip`` ::
 
-    pip install FastAPI-JSONAPI
+    pip install fastapi-jsonapi-next
 
 
 The development version can be downloaded from `its page at GitHub
-<https://github.com/mts-ai/FastAPI-JSONAPI>`_. ::
+<https://github.com/eljefedelrodeodeljefe/fastapi-jsonapi-next>`_. ::
 
-    git clone https://github.com/mts-ai/FastAPI-JSONAPI.git
-    cd fastapi-jsonapi
+    git clone https://github.com/eljefedelrodeodeljefe/fastapi-jsonapi-next.git
+    cd fastapi-jsonapi-next
     poetry install poetry install --all-extras
 
 .. note::

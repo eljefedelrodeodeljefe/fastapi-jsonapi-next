@@ -5,7 +5,7 @@ Logical data abstraction
 
 .. currentmodule:: fastapi_jsonapi
 
-The first thing to do in FastAPI-JSONAPI is to create a logical data abstraction.
+The first thing to do in fastapi-jsonapi-next is to create a logical data abstraction.
 This part of the API describes schemas of resources exposed by the API
 that are not an exact mapping of the data architecture.
 Pydantic is a very popular serialization/deserialization library

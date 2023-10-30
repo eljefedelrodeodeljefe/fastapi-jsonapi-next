@@ -7,7 +7,7 @@ Resource Manager
 
 Resource manager is the link between your logical data abstraction, your data layer and optionally other software. It is the place where logic management of your resource is located.
 
-FastAPI-JSONAPI provides three kinds of resource managers with default methods implemented according to the JSON:API 1.0 specification:
+fastapi-jsonapi-next provides three kinds of resource managers with default methods implemented according to the JSON:API 1.0 specification:
 
 * **ResourceList**: provides get and post methods to retrieve or create a collection of objects.
 * **ResourceDetail**: provides get, patch and delete methods to retrieve details of an object, update or delete it

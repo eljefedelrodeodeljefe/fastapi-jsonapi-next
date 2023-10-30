@@ -7,17 +7,17 @@ Quickstart
 
 It's time to write your first advanced REST API.
 This guide assumes you have a working understanding of FastAPI,
-and that you have already installed both FastAPI and FastAPI-JSONAPI.
+and that you have already installed both FastAPI and fastapi-jsonapi-next.
 If not, then follow the steps in the :ref:`installation` section.
 
-In this section you will learn basic usage of FastAPI-JSONAPI
+In this section you will learn basic usage of fastapi-jsonapi-next
 around a small tutorial that uses the SQLAlchemy data layer.
 This tutorial shows you an example of a user and their computers.
 
 Advanced example
 ----------------
 
-An example of FastAPI-JSONAPI API looks like this:
+An example of fastapi-jsonapi-next API looks like this:
 
 .. literalinclude:: ../examples/api_for_sqlalchemy/urls.py
     :language: python
@@ -81,7 +81,7 @@ in developing
 +-------------------------------------------+--------+------------------+------------------------------------------------------+
 
 
-Save `this file <https://github.com/mts-ai/FastAPI-JSONAPI/blob/main/examples/api_for_sqlalchemy/main.py>`_ as api.py and run it using your Python interpreter. Note that we've enabled
+Save `this file <https://github.com/eljefedelrodeodeljefe/fastapi-jsonapi-next/blob/main/examples/api_for_sqlalchemy/main.py>`_ as api.py and run it using your Python interpreter. Note that we've enabled
 messages. ::
 
     $ python api.py

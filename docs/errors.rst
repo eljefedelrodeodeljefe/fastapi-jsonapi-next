@@ -53,16 +53,16 @@ The previous example shows an error located in data provided. The following exam
       }
     }
 
-FastAPI-JSONAPI provides two kinds of helpers for displaying errors:
+fastapi-jsonapi-next provides two kinds of helpers for displaying errors:
 
 
-| * **the exceptions module**: you can import a lot of exceptions from this `module <https://github.com/mts-ai/FastAPI-JSONAPI/blob/main/fastapi_jsonapi/exceptions/json_api.py>`_ that helps you to raise exceptions that will be well-formatted according to the JSON:API 1.0 specification
+| * **the exceptions module**: you can import a lot of exceptions from this `module <https://github.com/eljefedelrodeodeljefe/fastapi-jsonapi-next/blob/main/fastapi_jsonapi/exceptions/json_api.py>`_ that helps you to raise exceptions that will be well-formatted according to the JSON:API 1.0 specification
 
-When you create custom code for your API I recommend using exceptions from the FastAPI-JSONAPI's exceptions module to raise errors because HTTPException-based exceptions are caught and rendered according to the JSON:API 1.0 specification.
+When you create custom code for your API I recommend using exceptions from the fastapi-jsonapi-next's exceptions module to raise errors because HTTPException-based exceptions are caught and rendered according to the JSON:API 1.0 specification.
 
 
 You can raise an exception in any point yor app. ResourceManager, DataLayer, etc.
-All of the exceptions defined by FastAPI-JSONAPI will handled by the root handler
+All of the exceptions defined by fastapi-jsonapi-next will handled by the root handler
 ``fastapi_jsonapi.exceptions.handlers.base_exception_handler`` and we'll see pretty JSON:API spec output
 
 Example:

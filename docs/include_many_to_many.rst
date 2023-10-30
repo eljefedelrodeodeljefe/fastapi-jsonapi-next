@@ -7,7 +7,7 @@ Include nested and related, Many-to-Many
 
 The same as usual includes. Here's an example with an association object.
 
-Example (sources `here <https://github.com/mts-ai/FastAPI-JSONAPI/tree/main/examples/api_for_sqlalchemy>`_):
+Example (sources `here <https://github.com/eljefedelrodeodeljefe/fastapi-jsonapi-next/tree/main/examples/api_for_sqlalchemy>`_):
 
 Prepare models and schemas
 ==========================

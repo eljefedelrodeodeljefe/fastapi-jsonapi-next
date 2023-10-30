@@ -289,7 +289,7 @@ class RoutersJSONAPI:
         filters_list = Query(
             None,
             alias="filter",
-            description="[Filtering docs](https://fastapi-jsonapi.readthedocs.io/en/latest/filtering.html)"
+            description="[Filtering docs](https://fastapi-jsonapi-next.readthedocs.io/en/latest/filtering.html)"
             "\nExamples:\n* filter for timestamp interval: "
             '`[{"name": "timestamp", "op": "ge", "val": "2020-07-16T11:35:33.383"},'
             '{"name": "timestamp", "op": "le", "val": "2020-07-21T11:35:33.383"}]`',
@@ -306,7 +306,7 @@ class RoutersJSONAPI:
         sort = Query(
             None,
             alias="sort",
-            description="[Sorting docs](https://fastapi-jsonapi.readthedocs.io/en/latest/sorting.html)"
+            description="[Sorting docs](https://fastapi-jsonapi-next.readthedocs.io/en/latest/sorting.html)"
             "\nExamples:\n* `email` - sort by email ASC\n* `-email` - sort by email DESC"
             "\n* `created_at,-email` - sort by created_at ASC and by email DESC",
         )

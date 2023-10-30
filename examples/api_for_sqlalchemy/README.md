@@ -2,7 +2,7 @@
 
 ### Start app
 ```shell
-# in dir fastapi-jsonapi
+# in dir fastapi-jsonapi-next
 
 cd examples
 python api_minimal.py

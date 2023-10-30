@@ -5,7 +5,7 @@ View Dependencies
 
 .. currentmodule:: fastapi_jsonapi
 
-As you already know, in the process of its work, FastAPI-JSONAPI interacts between application layers.
+As you already know, in the process of its work, fastapi-jsonapi-next interacts between application layers.
 Sometimes there are things that are necessary to process requests but are only computable at runtime.
 In order for ResourceManager and DataLayer to use such things, there is a mechanism called **method_dependencies**.
 

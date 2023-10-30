@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 #
-# fastapi-jsonapi documentation build configuration file, created by
+# fastapi-jsonapi-next documentation build configuration file, created by
 # sphinx-quickstart on Fri Oct 21 14:33:15 2016.
 #
 # This file is execfile()d with the current directory set to its
@@ -55,7 +55,7 @@ master_doc = "index"
 
 today_year = datetime.today().year
 # General information about the project.
-project = "FastAPI-JSONAPI"
+project = "fastapi-jsonapi-next"
 copyright = f"{today_year}, MTS AI"
 author = "MTS AI"
 
@@ -244,7 +244,7 @@ html_theme_options = {
 # html_search_scorer = 'scorer.js'
 
 # Output file base name for HTML help builder.
-htmlhelp_basename = "fastapi-jsonapidoc"
+htmlhelp_basename = "fastapi-jsonapi-nextdoc"
 
 # -- Options for LaTeX output ---------------------------------------------
 
@@ -267,7 +267,7 @@ latex_elements = {
 # (source start file, target name, title,
 #  author, documentclass [howto, manual, or own class]).
 latex_documents = [
-    (master_doc, "fastapi-jsonapi.tex", "fastapi-jsonapi Documentation", "mts ai", "manual"),
+    (master_doc, "fastapi-jsonapi-next.tex", "fastapi-jsonapi-next Documentation", "mts ai", "manual"),
 ]
 
 # The name of an image file (relative to this directory) to place at the top of
@@ -307,7 +307,7 @@ latex_documents = [
 
 # One entry per manual page. List of tuples
 # (source start file, name, description, authors, manual section).
-man_pages = [(master_doc, "fastapi-jsonapi", "fastapi-jsonapi Documentation", [author], 1)]
+man_pages = [(master_doc, "fastapi-jsonapi-next", "fastapi-jsonapi-next Documentation", [author], 1)]
 
 # If true, show URL addresses after external links.
 #
@@ -322,10 +322,10 @@ man_pages = [(master_doc, "fastapi-jsonapi", "fastapi-jsonapi Documentation", [a
 texinfo_documents = [
     (
         master_doc,
-        "fastapi-jsonapi",
-        "fastapi-jsonapi Documentation",
+        "fastapi-jsonapi-next",
+        "fastapi-jsonapi-next Documentation",
         author,
-        "fastapi-jsonapi",
+        "fastapi-jsonapi-next",
         "One line description of project.",
         "Miscellaneous",
     ),

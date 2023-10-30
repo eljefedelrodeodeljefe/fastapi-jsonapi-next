@@ -276,5 +276,5 @@ Notes
 
     Includes in the response body are not supported (and not planned, until you PR it)
 
-.. _`examples for SQLAlchemy`: https://github.com/mts-ai/FastAPI-JSONAPI/tree/main/examples/api_for_sqlalchemy
-.. _`test_current_atomic_operation`: https://github.com/mts-ai/FastAPI-JSONAPI/blob/main/tests/test_atomic/test_current_atomic_operation.py
+.. _`examples for SQLAlchemy`: https://github.com/eljefedelrodeodeljefe/fastapi-jsonapi-next/tree/main/examples/api_for_sqlalchemy
+.. _`test_current_atomic_operation`: https://github.com/eljefedelrodeodeljefe/fastapi-jsonapi-next/blob/main/tests/test_atomic/test_current_atomic_operation.py

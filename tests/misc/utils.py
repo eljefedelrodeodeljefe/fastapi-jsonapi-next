@@ -8,4 +8,4 @@ from faker import Faker
 
 fake = Faker()
 
-Faker.seed("some-qwerty-seed-to-keep-persistent-abc-mts-ai-fastapi-jsonapi")
+Faker.seed("some-qwerty-seed-to-keep-persistent-abc-eljefedelrodeodeljefe-fastapi-jsonapi-next")

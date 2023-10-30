@@ -1,18 +1,24 @@
-[![Last Commit](https://img.shields.io/github/last-commit/mts-ai/FastAPI-JSONAPI?style=for-the-badge)](https://github.com/mts-ai/FastAPI-JSONAPI)
-[![PyPI](https://img.shields.io/pypi/v/fastapi-jsonapi?label=PyPI&style=for-the-badge)](https://pypi.org/project/FastAPI-JSONAPI/)
-[![](https://img.shields.io/pypi/pyversions/FastAPI-JSONAPI?style=for-the-badge)](https://pypi.org/project/FastAPI-JSONAPI/)
-[![](https://img.shields.io/github/license/ycd/manage-fastapi?style=for-the-badge)](https://pypi.org/project/FastAPI-JSONAPI/)
-![GitHub Actions](https://img.shields.io/github/actions/workflow/status/mts-ai/FastAPI-JSONAPI/testing.yml?style=for-the-badge)
-[![Read the Docs](https://img.shields.io/readthedocs/fastapi-jsonapi?style=for-the-badge)](https://fastapi-jsonapi.readthedocs.io/en/latest/)
+[![Last Commit](https://img.shields.io/github/last-commit/eljefedelrodeodeljefe/fastapi-jsonapi-next?style=for-the-badge)](https://github.com/eljefedelrodeodeljefe/fastapi-jsonapi-next)
+[![PyPI](https://img.shields.io/pypi/v/fastapi-jsonapi-next?label=PyPI&style=for-the-badge)](https://pypi.org/project/fastapi-jsonapi-next/)
+[![](https://img.shields.io/pypi/pyversions/fastapi-jsonapi-next?style=for-the-badge)](https://pypi.org/project/fastapi-jsonapi-next/)
+[![](https://img.shields.io/github/license/ycd/manage-fastapi?style=for-the-badge)](https://pypi.org/project/fastapi-jsonapi-next/)
+![GitHub Actions](https://img.shields.io/github/actions/workflow/status/eljefedelrodeodeljefe/fastapi-jsonapi-next/testing.yml?style=for-the-badge)
+[![Read the Docs](https://img.shields.io/readthedocs/fastapi-jsonapi-next?style=for-the-badge)](https://fastapi-jsonapi-next.readthedocs.io/en/latest/)
 
-[![📖 Docs (gh-pages)](https://github.com/mts-ai/FastAPI-JSONAPI/actions/workflows/documentation.yaml/badge.svg)](https://mts-ai.github.io/FastAPI-JSONAPI/)
+[![📖 Docs (gh-pages)](https://github.com/eljefedelrodeodeljefe/fastapi-jsonapi-next/actions/workflows/documentation.yaml/badge.svg)](https://eljefedelrodeodeljefe.github.io/fastapi-jsonapi-next/)
 
-# FastAPI-JSONAPI
+# fastapi-jsonapi-next
 
-FastAPI-JSONAPI is a FastAPI extension for building REST APIs.
+`fastapi-jsonapi-next` is a FastAPI extension for building REST APIs.
 Implementation of a strong specification [JSONAPI 1.0](http://jsonapi.org/).
 This framework is designed to quickly build REST APIs and fit the complexity
 of real life projects with legacy data and multiple data storages.
+
+## Acknowledgment
+
+This repo is a fork of the excellent [mts-ai/FastAPI-JSONAPI](https://github.com/mts-ai/FastAPI-JSONAPI).
+
+We have decided to make changes in a pace and with contents that are not easily bareable for a maintainer. We are attempting to merge back or pick changes that are logical extensions or fixes.
 
 ## Architecture
 
@@ -21,7 +27,7 @@ of real life projects with legacy data and multiple data storages.
 ## Install
 
 ```bash
-pip install FastAPI-JSONAPI
+pip install fastapi-jsonapi-next
 ```
 
 ## A minimal API

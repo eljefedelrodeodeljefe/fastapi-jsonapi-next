@@ -1,22 +1,22 @@
-FastAPI-JSONAPI
+fastapi-jsonapi-next
 ==================
-.. image:: https://img.shields.io/pypi/v/fastapi-jsonapi?style=for-the-badge
+.. image:: https://img.shields.io/pypi/v/fastapi-jsonapi-next?style=for-the-badge
    :alt: PyPI
-   :target: http://pypi.org/p/fastapi-jsonapi
+   :target: http://pypi.org/p/fastapi-jsonapi-next
 
-.. image:: https://img.shields.io/pypi/pyversions/fastapi-jsonapi?style=for-the-badge
+.. image:: https://img.shields.io/pypi/pyversions/fastapi-jsonapi-next?style=for-the-badge
    :alt: Python Version
-   :target: http://pypi.org/p/fastapi-jsonapi
+   :target: http://pypi.org/p/fastapi-jsonapi-next
 
-.. image:: https://img.shields.io/github/license/mts-ai/FastAPI-JSONAPI?style=for-the-badge
+.. image:: https://img.shields.io/github/license/eljefedelrodeodeljefe/fastapi-jsonapi-next?style=for-the-badge
    :alt: GitHub
-   :target: https://github.com/mts-ai/FastAPI-JSONAPI
+   :target: https://github.com/eljefedelrodeodeljefe/fastapi-jsonapi-next
 
 
-**FastAPI-JSONAPI** is an extension for FastAPI that adds support for quickly building REST APIs
+**fastapi-jsonapi-next** is an extension for FastAPI that adds support for quickly building REST APIs
 with huge flexibility around the JSON:API 1.0 specification.
 It is designed to fit the complexity of real life environments
-so FastAPI-JSONAPI helps you to create a logical abstraction of your data
+so fastapi-jsonapi-next helps you to create a logical abstraction of your data
 called "resource". It can interface any kind of ORMs or data storage
 through the concept of data layers.
 
@@ -36,7 +36,7 @@ Main concepts
 Features
 --------
 
-FastAPI-JSONAPI has many features:
+fastapi-jsonapi-next has many features:
 
 * Relationship management - in developing
 * Powerful filtering
@@ -52,7 +52,7 @@ User's Guide
 ------------
 
 This part of the documentation will show you how to get started using
-FastAPI-JSONAPI with FastAPI.
+fastapi-jsonapi-next with FastAPI.
 
 .. toctree::
    :maxdepth: 3
@@ -85,7 +85,7 @@ FastAPI-JSONAPI with FastAPI.
    errors
    permission
    oauth
-   fastapi-jsonapi
+   fastapi-jsonapi-next
 
 .. toctree::
    :maxdepth: 2
